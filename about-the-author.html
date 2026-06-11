@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About the Author — Vanessa Hensel</title>
   <meta name="description" content="About Vanessa Hensel, author of House Church: Embracing Authentic Community." />
-  <link rel="icon" href="logo.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath d='M4.5 16.5 18 5l13.5 11.5' fill='none' stroke='%2316302b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 14.5V31h20V14.5' fill='none' stroke='%2316302b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 14v9M14 17.5h8' fill='none' stroke='%23a8842c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="House Church logo" onerror="this.style.display='none'" />
+      <a class="brand" href="index.html" aria-label="House Church — home">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <path d="M4.5 16.5 18 5l13.5 11.5" fill="none" stroke="#16302b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 14.5V31h20V14.5" fill="none" stroke="#16302b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 14v9M14 17.5h8" fill="none" stroke="#a8842c" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
         <span class="brand-text">House Church<small>Embracing Authentic Community</small></span>
       </a>
-      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about-the-book.html">About the Book</a></li>
@@ -30,30 +34,44 @@
   </header>
 
   <main>
-    <section class="section">
+    <!-- Page hero -->
+    <section class="page-hero">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow" style="color:var(--gold-dark);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;">About the Author</div>
-          <h2>Vanessa Hensel</h2>
+        <span class="kicker">About the Author</span>
+        <h1>Vanessa Hensel</h1>
+        <p>Author of <em>House Church: Embracing Authentic Community</em></p>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="section">
+      <div class="container author-grid">
+        <div>
+          <!-- To add a photo: place author.jpg in the site folder. It will replace the monogram automatically. -->
+          <img class="author-photo" src="author.jpg" alt="Vanessa Hensel"
+               onerror="this.style.display='none';var f=document.getElementById('authorFallback');if(f)f.style.display='flex';" />
+          <div class="author-photo-fallback" id="authorFallback" style="display:none;">VH</div>
         </div>
-        <div class="author-grid">
-          <div>
-            <!-- To add a photo: place author.jpg in the assets folder. It will replace the initial below automatically. -->
-            <img class="author-photo" src="author.jpg" alt="Vanessa Hensel"
-                 onerror="this.style.display='none';var f=document.getElementById('authorFallback');if(f)f.style.display='flex';" />
-            <div class="author-photo-fallback" id="authorFallback" style="display:none;">VH</div>
-          </div>
-          <div>
-            <p>Vanessa Hensel is the author of <em>House Church: Embracing Authentic Community</em>. Her heart is for believers to experience the kind of deep, genuine fellowship modeled by Jesus and the early church — communities built on surrender to Christ, shared life, and service to one another.</p>
-            <p>Through her writing, Vanessa encourages Christians to look beyond traditional religious structures and rediscover the simplicity and intimacy of gathering in homes, where relationships run deep and the Holy Spirit is free to work. Her aim is to equip readers with both the vision and the practical steps to start and nurture house church communities of their own.</p>
-            <!-- Ed: add Vanessa's personal bio details here (background, ministry, family, where she lives, etc.). -->
-            <p><em>House Church: Embracing Authentic Community</em> is available in paperback, eBook, and audiobook.</p>
-            <div class="hero-actions" style="margin-top:22px;">
-              <a class="btn btn-primary" href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Read the Book</a>
-              <a class="btn btn-outline" href="contact.html">Contact Vanessa</a>
-            </div>
+        <div>
+          <p>Vanessa Hensel is the author of <em>House Church: Embracing Authentic Community</em>. Her heart is for believers to experience the kind of deep, genuine fellowship modeled by Jesus and the early church — communities built on surrender to Christ, shared life, and service to one another.</p>
+          <p>Through her writing, Vanessa encourages Christians to look beyond traditional religious structures and rediscover the simplicity and intimacy of gathering in homes, where relationships run deep and the Holy Spirit is free to work. Her aim is to equip readers with both the vision and the practical steps to start and nurture house church communities of their own.</p>
+          <!-- Ed: add Vanessa's personal bio details here (background, ministry, family, where she lives, etc.). -->
+          <p><em>House Church: Embracing Authentic Community</em> is available in paperback, eBook, and audiobook.</p>
+          <div class="hero-actions" style="margin-top:1.6rem;">
+            <a class="btn btn-primary" href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Read the Book</a>
+            <a class="btn btn-outline" href="contact.html">Contact Vanessa</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Scripture band -->
+    <section class="quote-band">
+      <div class="container">
+        <blockquote>
+          &ldquo;By this shall all men know that ye are my disciples, if ye have love one to another.&rdquo;
+          <cite>John 13:35 &middot; KJV</cite>
+        </blockquote>
       </div>
     </section>
   </main>
@@ -62,21 +80,31 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">House Church</div>
-        <p style="color:#9fbab4;max-width:32ch;">Embracing Authentic Community — by Vanessa Hensel.</p>
+        <p class="footer-tag">Embracing Authentic Community — by Vanessa Hensel. Available in paperback, eBook, and audiobook.</p>
       </div>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-the-book.html">About the Book</a></li>
-        <li><a href="about-the-author.html">About the Author</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <ul class="footer-links">
-        <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Buy on Amazon</a></li>
-      </ul>
+      <div>
+        <div class="footer-head">Explore</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-the-book.html">About the Book</a></li>
+          <li><a href="about-the-author.html">About the Author</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-head">Get the Book</div>
+        <ul class="footer-links">
+          <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Paperback on Amazon</a></li>
+          <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Kindle Edition</a></li>
+          <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Audible Audiobook</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="container footer-bottom">© <span id="yr"></span> House Church. All Rights Reserved.</div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="yr"></span> House Church. All Rights Reserved.</span>
+      <span>housechurchbook.com</span>
+    </div>
   </footer>
   <script src="site.js"></script>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>

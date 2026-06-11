@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — House Church: Embracing Authentic Community</title>
   <meta name="description" content="Get in touch about House Church: Embracing Authentic Community by Vanessa Hensel." />
-  <link rel="icon" href="logo.png" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath d='M4.5 16.5 18 5l13.5 11.5' fill='none' stroke='%2316302b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 14.5V31h20V14.5' fill='none' stroke='%2316302b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 14v9M14 17.5h8' fill='none' stroke='%23a8842c' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="House Church logo" onerror="this.style.display='none'" />
+      <a class="brand" href="index.html" aria-label="House Church — home">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <path d="M4.5 16.5 18 5l13.5 11.5" fill="none" stroke="#16302b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 14.5V31h20V14.5" fill="none" stroke="#16302b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 14v9M14 17.5h8" fill="none" stroke="#a8842c" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
         <span class="brand-text">House Church<small>Embracing Authentic Community</small></span>
       </a>
-      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about-the-book.html">About the Book</a></li>
@@ -30,47 +34,44 @@
   </header>
 
   <main>
-    <section class="section">
+    <!-- Page hero -->
+    <section class="page-hero">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow" style="color:var(--gold-dark);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;">Contact Us</div>
-          <h2>Get in Touch</h2>
-          <p>Questions about the book, house churches, or speaking? Send a note and we'll get back to you.</p>
+        <span class="kicker">Contact</span>
+        <h1>Get in Touch</h1>
+        <p>Questions about the book, house churches, or speaking? Send a note and we&rsquo;ll get back to you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <!--
+            FORM SETUP: This form posts to Formspree (free, works on GitHub Pages).
+            1) Create a free form at https://formspree.io and copy your form ID.
+            2) Replace YOUR_FORM_ID below with it.
+          -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="message">Comment or Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
         </div>
 
-        <div class="contact-grid">
-          <div class="contact-card">
-            <!--
-              FORM SETUP: This form posts to Formspree (free, works on GitHub Pages).
-              1) Create a free form at https://formspree.io and copy your form ID.
-              2) Replace YOUR_FORM_ID below with it.
-              Until then, the "email us directly" option on the right always works.
-            -->
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-field">
-                <label for="message">Comment or Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-          </div>
-
-          <div>
-            <h3>Prefer email?</h3>
-            <!-- Replace the address below with the real contact email. -->
-            <p>Write to us directly at<br />
-              <a href="mailto:CONTACT_EMAIL">CONTACT_EMAIL</a>
-            </p>
-            <h3 style="margin-top:28px;">Get the book</h3>
-            <p>House Church: Embracing Authentic Community is available on Amazon in paperback, Kindle, and Audible.</p>
+        <div>
+          <div class="aside-card">
+            <h3>Get the Book</h3>
+            <p><em>House Church: Embracing Authentic Community</em> is available on Amazon in paperback, Kindle, and Audible.</p>
             <a class="btn btn-outline" href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">View on Amazon</a>
           </div>
         </div>
@@ -82,21 +83,31 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">House Church</div>
-        <p style="color:#9fbab4;max-width:32ch;">Embracing Authentic Community — by Vanessa Hensel.</p>
+        <p class="footer-tag">Embracing Authentic Community — by Vanessa Hensel. Available in paperback, eBook, and audiobook.</p>
       </div>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-the-book.html">About the Book</a></li>
-        <li><a href="about-the-author.html">About the Author</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <ul class="footer-links">
-        <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Buy on Amazon</a></li>
-      </ul>
+      <div>
+        <div class="footer-head">Explore</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-the-book.html">About the Book</a></li>
+          <li><a href="about-the-author.html">About the Author</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-head">Get the Book</div>
+        <ul class="footer-links">
+          <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Paperback on Amazon</a></li>
+          <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Kindle Edition</a></li>
+          <li><a href="https://www.amazon.com/dp/B0C9S1WPQV" target="_blank" rel="noopener">Audible Audiobook</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="container footer-bottom">© <span id="yr"></span> House Church. All Rights Reserved.</div>
+    <div class="container footer-bottom">
+      <span>&copy; <span id="yr"></span> House Church. All Rights Reserved.</span>
+      <span>housechurchbook.com</span>
+    </div>
   </footer>
   <script src="site.js"></script>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
